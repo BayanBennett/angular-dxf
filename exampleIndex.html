@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ngDxfExample">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+<script src="../angular-dxf.js" type="text/javascript"></script>
+<script src="exampleApp.js" type="text/javascript"></script>
+<title>Angular To DXF Example</title>
+</head>
+<body ng-controller="exampleController as example">
+    <h1>Select dxf file</h1>
+    <input type="file" on-read-file="example.showContent($fileContent)" />
+    <div ng-if="example.content">
+        <h2>File content is:</h2>
+        <pre>{{ example.content|json }}</pre>
+    </div>
+</body>
+</html>
